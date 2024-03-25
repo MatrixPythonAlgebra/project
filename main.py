@@ -25,7 +25,6 @@ for row in matrix:
 dp = np.dot(matrix,eye3)
 print(dp)
 
-
 # dot product function
 def dotProduct(A, B):
  if A.shape[1] != B.shape[0]:
@@ -65,7 +64,6 @@ print(vectCheck)
 # check dot product function
 dotCheck = dotProduct(matrix, eye3)
 print(dotCheck)
-
 
 
 
