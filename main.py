@@ -14,6 +14,7 @@ print(eye3)
 
 matrix = np.array([[1, 2, 3],[4, 5, 6],[7, 8 ,9]])
 print(matrix)
+
 print(matrix[0,0])
 print(matrix[2, 2])
 
@@ -64,3 +65,7 @@ print(vectCheck)
 # check dot product function
 dotCheck = dotProduct(matrix, eye3)
 print(dotCheck)
+
+
+
+
