@@ -24,15 +24,8 @@ for row in matrix:
 dp = np.dot(matrix,eye3)
 print(dp)
 
-result = np.zeros((3,3))
 
-for i in range(3):
- for j in range(3):
-  for k in range(3):
-   result[i][j] += matrix[i][k] * eye3[k, j]
-
-print(result)
-
+# dot product function
 def dotProduct(A, B):
  if A.shape[1] != B.shape[0]:
     return "mismatched indecies"
@@ -50,6 +43,24 @@ def dotProduct(A, B):
 
  return res
 
-check = dotProduct(matrix, eye3)
+# vector * matrix function
+def vectorXmatrix (v, m):
+  if len(v) != m.shape[0]:
+    return "mismatch"
+  
+  result = np.zeros(m.shape[1])
 
-print(check)
+  for i in range(m.shape[1]):
+    for j in range(len(v)):
+      result[i] += v[j] * m[j][i]
+
+  return result
+
+# check vector * matrix function
+vector = np.array([1, 2, 3])
+vectCheck = vectorXmatrix(vector, eye3)
+print(vectCheck)
+
+# check dot product function
+dotCheck = dotProduct(matrix, eye3)
+print(dotCheck)
