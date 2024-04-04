@@ -65,10 +65,16 @@ print(vectCheck)
 dotCheck = dotProduct(matrix, eye3)
 print(dotCheck)
 #test part 2 rotations
-point= [2,3]
+point= [2,4]
 print(part2.CounterClockRotate(point,np.pi/2))
-
 print(part2.ClockRotate(point,np.pi/2))
 #test part2 axis rotations
 print(f'{part2.ReflectX(point)}  {part2.ReflectY(point)}')
 print(f'{part2.ReflectYX(point)}  {part2.ReflectYMX(point, 3)}')
+#test part 2 shearing and expansion/contraction
+print(f'{part2.Xshear(point,2)}  {part2.YShear(point, 3)}  
+      {part2.XYShear(point, 2)}')
+print(f'{part2.XMult(point,2)}  {part2.YMult(point, 3)}  
+      {part2.XYMult(point, 2)}')
+
+
