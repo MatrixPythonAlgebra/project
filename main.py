@@ -65,5 +65,5 @@ print(vectCheck)
 dotCheck = dotProduct(matrix, eye3)
 print(dotCheck)
 
-
+def rotateCounterClockwise (v, )
 
