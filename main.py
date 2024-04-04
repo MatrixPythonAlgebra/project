@@ -1,30 +1,19 @@
 import numpy as np
+from PIL import Image, ImageDraw
 
 # 3x3 matrix with random values
 random3 = np.random.random((3,3))
-print(random3)
 
 # 3x3 identity matrix
 eye3 = np.eye(3)
-print(eye3)
 
 # matrix [1, 2 ,3,
 #         4, 5, 6,
 #         7, 8, 9 ]
 
 matrix = np.array([[1, 2, 3],[4, 5, 6],[7, 8 ,9]])
-print(matrix)
-
-print(matrix[0,0])
-print(matrix[2, 2])
-
-for row in matrix:
- for item in row:
-  print(item)
 
 dp = np.dot(matrix,eye3)
-print(dp)
-
 
 # dot product function
 def dotProduct(A, B):
@@ -60,12 +49,15 @@ def vectorXmatrix (v, m):
 # check vector * matrix function
 vector = np.array([1, 2, 3])
 vectCheck = vectorXmatrix(vector, eye3)
-print(vectCheck)
 
 # check dot product function
 dotCheck = dotProduct(matrix, eye3)
-print(dotCheck)
 
+ogImage = Image.open('star.png')
+ogImage.show()
 
+imageMatrix = np.array(ogImage)
 
-
+rotatedImageMatrix = np.rot90(imageMatrix, k=2)
+rotatedImage = Image.fromarray(rotatedImageMatrix)
+rotatedImage.show()
