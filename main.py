@@ -1,5 +1,5 @@
 import numpy as np
-
+import part2
 # 3x3 matrix with random values
 random3 = np.random.random((3,3))
 print(random3)
@@ -64,6 +64,7 @@ print(vectCheck)
 # check dot product function
 dotCheck = dotProduct(matrix, eye3)
 print(dotCheck)
-
-def rotateCounterClockwise (v, )
+#test part 2 rotations
+print(part2.CounterClockRotate(np.array([2,3]),np.pi))
+print(part2.ClockRotate(np.array([2,3]),np.pi))
 
