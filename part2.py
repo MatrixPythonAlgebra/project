@@ -30,4 +30,28 @@ def ReflectYMX(V, m):
     newX=((1-m*m)*V[0]+2*m*V[1])/k
     newY=(2*m*V[0]+(m*m-1)*V[1])/k
     return [newX, newY]
+#returns V, sheared in the X-direction by k, formula V[0]+=kV[1]
+#precondition: V is a 1x2 vector, k is a real scalar
+def XShear(V, k):
+    return [V[0]+k*V[1], V[1]]
+#returns V, sheared in the Y-direction by k, formula V[1]+=kV[0]
+#precondition: V is a 1x2 vector, k is a real scalar
+def YShear(V, k):
+    return [V[0], V[1]+k*V[0]]
+#returns V, sheared in the Y-andX-direction by k, formula V[0]+kV[1]
+#precondition: V is a 1x2 vector, k is a real scalar      V[1]+kV[0]
+def XYShear(V, k):
+    return [V[0]+k*V[1], V[1]+k*V[0]]
+#returns V, multiplied in the X-direction by k, formula V[0]*k
+#precondition: V is a 1x2 vector, k is a real scalar
+def XMult(V, k):
+    return [V[0]*k,V[1]]
+#returns V, multiplied in the Y-direction by k, formula V[1]*k
+#precondition: V is a 1x2 vector, k is a real scalar
+def YMult(V, k):
+    return [V[0],V[1]*k]
+#returns V, multiplied in the X-and-Y-direction by k, formula V[0]*k
+#precondition: V is a 1x2 vector, k is a real scalar          V[1]*k
+def XYMult(V, k):
+    return [V[0]*k,V[1]*k]
 
