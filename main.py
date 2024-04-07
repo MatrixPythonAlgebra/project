@@ -66,13 +66,12 @@ print(part2.ClockRotate(point,np.pi/2))
 print(f'{part2.ReflectX(point)}  {part2.ReflectY(point)}')
 print(f'{part2.ReflectYX(point)}  {part2.ReflectYMX(point, 3)}')
 #test part 2 shearing and expansion/contraction
-print(f'{part2.Xshear(point,2)}  {part2.YShear(point, 3)}  
-      {part2.XYShear(point, 2)}')
-print(f'{part2.XMult(point,2)}  {part2.YMult(point, 3)}  
-      {part2.XYMult(point, 2)}')
+print(f'{part2.XShear(point,2)}  {part2.YShear(point, 3)}  {part2.XYShear(point, 2)}')
+print(f'{part2.XMult(point,2)}  {part2.YMult(point, 3)}  {part2.XYMult(point, 2)}')
 
 imageMatrix = np.array(ogImage)
+print(imageMatrix[10][100])
 
-rotatedImageMatrix = np.rot90(imageMatrix, k=2)
+rotatedImageMatrix = np.rot90(imageMatrix, k=1)
 rotatedImage = Image.fromarray(rotatedImageMatrix)
 rotatedImage.show()
