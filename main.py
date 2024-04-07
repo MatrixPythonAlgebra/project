@@ -55,7 +55,7 @@ vectCheck = vectorXmatrix(vector, eye3)
 # check dot product function
 dotCheck = dotProduct(matrix, eye3)
 
-ogImage = Image.open('star.png')
+ogImage = Image.open('star2.png')
 ogImage.show()
 print(dotCheck)
 #test part 2 rotations
@@ -66,10 +66,8 @@ print(part2.ClockRotate(point,np.pi/2))
 print(f'{part2.ReflectX(point)}  {part2.ReflectY(point)}')
 print(f'{part2.ReflectYX(point)}  {part2.ReflectYMX(point, 3)}')
 #test part 2 shearing and expansion/contraction
-print(f'{part2.Xshear(point,2)}  {part2.YShear(point, 3)}  
-      {part2.XYShear(point, 2)}')
-print(f'{part2.XMult(point,2)}  {part2.YMult(point, 3)}  
-      {part2.XYMult(point, 2)}')
+print(f'{part2.XShear(point,2)}  {part2.YShear(point, 3)}  {part2.XYShear(point, 2)}')
+print(f'{part2.XMult(point,2)}  {part2.YMult(point, 3)}  {part2.XYMult(point, 2)}')
 
 imageMatrix = np.array(ogImage)
 
