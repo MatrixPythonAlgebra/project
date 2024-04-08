@@ -72,6 +72,33 @@ print(f'{part2.XMult(point,2)}  {part2.YMult(point, 3)} {part2.XYMult(point, 2)}
 
 imageMatrix = np.array(ogImage)
 
-rotatedImageMatrix = np.rot90(imageMatrix, k=2)
+rotatedImageMatrix = np.rot90(imageMatrix, k=1)
 rotatedImage = Image.fromarray(rotatedImageMatrix)
 rotatedImage.show()
+rotatedImage.save("cc90.png")
+
+def reflect (image):
+    # Define the reflection matrix
+    reflection_matrix = np.array([[-1, 0],
+                                   [0, -1]])
+    
+    # Apply the reflection matrix to each channel of the image
+    reflected_image = np.zeros_like(image)
+    for channel in range(image.shape[2]):
+        reflected_image[:, :, channel] = np.flipud(np.fliplr(image[:, :, channel]))
+    
+    return reflected_image
+
+reflectImageMatrix = reflect(imageMatrix)
+reflectedImage = Image.fromarray(reflectImageMatrix)
+reflectedImage.show()
+reflectedImage.save("reflected.png")
+
+# Zoom the original image by a factor of 2
+zoom_factor = 2
+zoomed_image_matrix = np.kron(imageMatrix, np.ones((zoom_factor, zoom_factor, 1), dtype=np.uint8))
+
+# Display or save the zoomed image
+zoomed_image = Image.fromarray(zoomed_image_matrix)
+zoomed_image.show()
+zoomed_image.save("zoomed.png")
