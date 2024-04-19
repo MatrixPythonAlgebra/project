@@ -71,6 +71,7 @@ print(f'{part2.XShear(point,2)}  {part2.YShear(point, 3)} {part2.XYShear(point, 
 print(f'{part2.XMult(point,2)}  {part2.YMult(point, 3)} {part2.XYMult(point, 2)}')
 
 imageMatrix = np.array(ogImage)
+print(imageMatrix[10][100])
 
 rotatedImageMatrix = np.rot90(imageMatrix, k=1)
 rotatedImage = Image.fromarray(rotatedImageMatrix)

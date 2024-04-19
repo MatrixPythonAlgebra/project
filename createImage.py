@@ -12,6 +12,9 @@ starPoints = [
     (0, 80),
     (200, 80),
     (30, 190),
+    (100, 10),
+    (100, 117),
+    (59, 117)
 ]
 
 draw.polygon(starPoints, fill=None, outline='red')

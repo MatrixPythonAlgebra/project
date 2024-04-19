@@ -12,6 +12,9 @@ exectue python files:
     when done
     4. deactivate
 
+when adding libraries/dependancies:
+    1. pip freeze > requirements.txt
+
 if you encounter problems with activation or running:
     1. Set-ExecutionPolicy -Scope CurrentUser Unrestricted
 
