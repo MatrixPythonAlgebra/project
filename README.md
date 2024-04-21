@@ -12,8 +12,10 @@ exectue python files:
     when done
     4. deactivate
 
-when adding libraries/dependancies:
-    1. pip freeze > requirements.txt
+Adding libraries/dependancies in venv:
+    1. pip install requirements.txt
+    2. pip install library
+    2. pip freeze > requirements.txt
 
 if you encounter problems with activation or running:
     1. Set-ExecutionPolicy -Scope CurrentUser Unrestricted
