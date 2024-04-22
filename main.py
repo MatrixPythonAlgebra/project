@@ -1,6 +1,6 @@
 import numpy as np
 from PIL import Image, ImageDraw
-import part2
+import part2,part4
 
 # 3x3 matrix with random values
 random3 = np.random.random((3,3))
@@ -103,3 +103,5 @@ zoomed_image_matrix = np.kron(imageMatrix, np.ones((zoom_factor, zoom_factor, 1)
 zoomed_image = Image.fromarray(zoomed_image_matrix)
 zoomed_image.show()
 zoomed_image.save("zoomed.png")
+
+part4.make_gif(part4.make_img_arr("star.png"))
