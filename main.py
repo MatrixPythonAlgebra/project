@@ -104,4 +104,4 @@ zoomed_image = Image.fromarray(zoomed_image_matrix)
 zoomed_image.show()
 zoomed_image.save("zoomed.png")
 
-part4.make_gif(part4.make_img_arr("star.png"))
+part4.make_gif(part4.make_img_arr("star2.png"))
