@@ -2,6 +2,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 import part2,part4
 
+
 # 3x3 matrix with random values
 random3 = np.random.random((3,3))
 
@@ -104,4 +105,21 @@ zoomed_image = Image.fromarray(zoomed_image_matrix)
 zoomed_image.show()
 zoomed_image.save("zoomed.png")
 
+
+new_image = np.zeros((200, 200, 3), dtype=np.uint8)
+for i in range(200):
+    for j in range(200):
+        x, y = part2.ReflectYMX((i, j), 3)
+        x, y = int(x), int(y)  # Ensure x and y are integers
+        if y in range(200):
+           new_image[x, y] = imageMatrix[i, j]
+        #else:
+          # new_image[x, j] = imageMatrix[i, j]
+
+
+reflect3 = Image.fromarray(new_image)
+reflect3.save("reflect3.png")
+reflect3.show()
+
 part4.make_gif(part4.make_img_arr())
+
