@@ -1,5 +1,6 @@
 import numpy as np
 from PIL import Image, ImageDraw
+import part2
 
 width = 200
 height = 200
@@ -20,3 +21,18 @@ starPoints = [
 draw.polygon(starPoints, fill=None, outline='red')
 image.save("star2.png")
 image.show()
+
+newStar = []
+new_image = np.zeros((200, 200, 3), dtype=np.uint8)
+for point in starPoints:
+    newPoint = part2.XShear(point, 4)
+    newStar.append(newPoint)
+
+reflect3 = Image.new('RGB', (400, 400), color = 'white')
+draw3 = ImageDraw.Draw(reflect3)
+
+draw3.polygon(newStar, fill=None, outline='red')
+reflect3.save("sheared.png")
+reflect3.show()
+
+

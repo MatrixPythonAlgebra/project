@@ -27,13 +27,13 @@ def ReflectYX(V):
 #precondition: V is 1x2 matrix, m is scalar   [2m   m^2-1]
 def ReflectYMX(V, m):
     k=m*m+1
-    newX=((1-m*m)*V[0]+2*m*V[1])/k
-    newY=(2*m*V[0]+(m*m-1)*V[1])/k
-    return [newX, newY]
+    newX=int (((1-m*m)*V[0]+2*m*V[1])/k)
+    newY=int ((2*m*V[0]+(m*m-1)*V[1])/k)
+    return (newX, newY)
 #returns V, sheared in the X-direction by k, formula V[0]+=kV[1]
 #precondition: V is a 1x2 vector, k is a real scalar
 def XShear(V, k):
-    return [V[0]+k*V[1], V[1]]
+    return (int(V[0]+k*V[1]), V[1])
 #returns V, sheared in the Y-direction by k, formula V[1]+=kV[0]
 #precondition: V is a 1x2 vector, k is a real scalar
 def YShear(V, k):
