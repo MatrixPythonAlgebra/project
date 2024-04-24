@@ -1,6 +1,7 @@
 import numpy as np
 from PIL import Image, ImageDraw
-import part2, part4
+import part2,part4
+
 
 # 3x3 matrix with random values
 random3 = np.random.random((3,3))
@@ -120,5 +121,5 @@ reflect3 = Image.fromarray(new_image)
 reflect3.save("reflect3.png")
 reflect3.show()
 
-part4.make_gif(part4.make_img_arr("star2.png"))
+part4.make_gif(part4.make_img_arr())
 
