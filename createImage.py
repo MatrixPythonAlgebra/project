@@ -28,7 +28,7 @@ for point in starPoints:
     newPoint = part2.XShear(point, 4)
     newStar.append(newPoint)
 
-reflect3 = Image.new('RGB', (400, 400), color = 'white')
+reflect3 = Image.new('RGB', (200, 200), color = 'white')
 draw3 = ImageDraw.Draw(reflect3)
 
 draw3.polygon(newStar, fill=None, outline='red')
